@@ -7,5 +7,8 @@ import org.slf4j.event.Level
 fun Application.configureLogging() {
     install(CallLogging) {
         level = Level.ERROR
+        filter { call ->
+            (call.response.status()?.value ?: 0) >= 400
+        }
     }
 }
