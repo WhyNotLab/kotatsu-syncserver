@@ -2,7 +2,7 @@ services:
   db:
     image: mariadb:11.8
     ports:
-      - "3306:3306"
+      - "${DATABASE_EXTERNAL_PORT:-3306}:3306"
     environment:
       MARIADB_ROOT_PASSWORD: ${DATABASE_ROOT_PASSWORD:-root-password}
       MARIADB_USER: ${DATABASE_USER:-kotatsu}
