@@ -33,7 +33,8 @@ out/
 /.nb-gradle/
 
 ### VS Code ###
-.vscode/
+.vscode/*
+!.vscode/extensions.json
 
 ### Kotlin ###
 .kotlin
